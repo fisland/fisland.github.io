@@ -1,0 +1,175 @@
+body{
+	background: #FAFAFA;
+}
+.content-wrap{
+	background: #FAFAFA;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.sel-wrap{
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #d0d6d9;
+}
+.sel-wrap span{
+	font-size: 16px;
+	line-height: 60px;
+	color: #000000;
+}
+.sel-wrap .sel-green{
+	color: #29B078;
+}
+.occupation-sel-wrap{
+	font-size: 13px;
+	line-height: 26px;
+	border-bottom: 0.3px solid #edf1f2;
+}
+.occupation-sel-wrap *{
+	margin: 10px 8px;
+	padding: 2px 5px;
+}
+.occupation-sel-wrap .occupation-sel-sub
+{
+	color: #999999;
+	margin-left: 0px;
+}
+.occupation-sel-wrap .occupation-sel-item{
+	cursor: pointer;
+}
+.occupation-sel-wrap .occupation-sel-item:hover{
+	color: #FFFFFF;
+	background: #29B078;
+}
+.occupation-sel-wrap .occupation-sel-item-active{
+	color: #FFFFFF;
+	background: #29B078;
+}
+.occupation-content-sub{
+	height: 60px;
+	line-height: 60px;
+	border-bottom: 1px solid #d0d6d9;
+}
+.occupation-content-wrap-list{
+	width: 100%;
+	margin: 20px 0;
+}
+.occupation-content-item{
+	position: relative;
+	cursor: pointer;
+	width: 30%;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	background: #FFFFFF;
+	box-shadow: 1px 1px 5px #999;
+}
+.occupation-item-head{
+	padding: 20px 10px;
+	border-bottom: 1px solid #d0d6d9;
+	box-sizing: border-box;
+}
+.occupation-item-head .item-img{
+	float: left;
+	height: 100px;
+	width: 100px;
+	background: url(../img/port.png) no-repeat ;
+	background-size:cover ;
+	background-position: center center;
+}
+.occupation-item-head  .item-des{
+	width: 150px;
+	float: left;
+	margin-left:10px ;
+}
+.occupation-item-head  .item-des h3{
+	font-size: 16px;
+	font-weight: 700;
+	padding: 5px 0;
+}
+.occupation-item-head  .item-des p{
+	word-break:break-all;
+	font-size: 12px;
+	line-height: 14px;
+}
+.red{
+	color: red;
+}
+.occupation-list .list-item{
+	width: 50%;
+	padding: 10px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #edf1f2;
+	vertical-align: middle;
+	color: #999999;
+}
+.list-item-l{
+	border-right: 1px solid #edf1f2;
+}
+.occupation-list .list-item .star{
+	margin-left: 5px;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	vertical-align: middle;
+	background: url(../img/star.png) no-repeat ;
+	background-size:cover ;
+	background-position: center center;
+}
+.occupation-money .occupation-money-sub{
+	width: 50%;
+	border-bottom: 1px solid #edf1f2;
+	border-right: 1px solid #edf1f2;
+	height: 99px;
+	box-sizing: border-box;
+	line-height: 99px;
+	color: #999999;
+	padding-left: 50px;
+}
+.occupation-money-list{
+	width: 50%;
+}
+.occupation-money .occupation-money-item{
+	height: 33px;
+	border-bottom: 1px solid #edf1f2;
+	box-sizing: border-box;
+	line-height: 33px;
+	padding: 0 10px;
+}
+.occupation-study-number{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	border-bottom: 1px solid #edf1f2;
+	font-size: 14px;
+	font-weight: 700;
+}
+.occupation-remark{
+	font-size: 12px;
+	height: 40px;
+	padding-left: 10px;
+	padding-top: 10px;
+	color: #999999;
+}
+.occupation-content-item .mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.7);
+	color: #FFFFFF;
+	visibility: hidden;
+}
+.occupation-content-item:hover .mask{
+	visibility: visible;
+}
+.occupation-content-item .mask h3{
+	line-height: 140px;
+	width: 100px;
+	margin: 0 auto;
+}
+.occupation-content-item .mask p{
+	padding: 0 30px;
+	font-size: 14px;
+	line-height: 16px;
+}

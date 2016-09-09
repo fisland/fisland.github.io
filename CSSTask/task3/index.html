@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>葡萄藤</title>
+		<style type="text/css">
+			body{font-family: "微软雅黑";}
+			*{
+				box-sizing: border-box;
+				 -webkit-box-sizing: border-box;
+				margin: 0;}
+			a{-webkit-tap-highlight-color: transparent; text-decoration: none;}
+			a:active, a:hover, a:visited{color: #333333;}
+			.header{
+				position: fixed;
+				top: 0;
+				left: 0;
+				background-color: black;
+				width: 100%;
+				height: 2rem;
+				line-height: 2rem;
+				color: white;
+				font-size: 0.75rem;
+				z-index: 3;
+			}
+			.header .back{
+				position: absolute;
+				left: 0;
+				padding-left: 1rem;
+				background: url(img/Arrow.png) no-repeat 0.5rem 0.55rem/0.45rem 0.77rem;
+				color: white;
+				line-height: 2rem;
+			}
+			.header h1{
+				margin: 0;
+				font-size: 1.25rem;
+				text-align: center;
+			}
+			.header .more{
+				position: absolute;
+				width: 30px;
+				height: 2rem;
+				line-height: 3rem;
+				top: 0;
+				right: 0;
+				padding-right: 1rem;
+				background: url(img/more.png) no-repeat 0.55rem 0.6rem/0.9rem 0.77rem;
+			}
+			.body{
+				margin: 0;
+				width: 100%;
+				overflow: hidden;
+				font-size: 0.75rem;
+				color: white;
+				padding-bottom: 2.5rem;
+				background: url(img/背景.png);
+			}
+			.body .imgBox {
+				width: 7%;
+				position: absolute;
+				top: 2.5rem;
+				left: 1rem;
+			}
+			.body .imgBox img {
+				width: 100%;
+			}
+			.main {
+				width:100% ;
+				padding: 4.5rem 2.5rem;
+				margin: 0 auto;
+			}
+			.body .logo{
+				width: 50%;
+				margin: 0 auto;
+			}
+			.body .logo img{
+				width: 100%;
+			}
+			.body .content{
+				line-height: 1.5rem;
+				margin: 2.5rem auto;
+			}
+			.circle1,.circle2{
+				width: 50%;
+				float: left;
+				font-size: 0.7rem;
+				line-height: 0.9rem;
+				text-align: center;
+			}
+			.circle1 img, .circle2 img{
+				width: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<a href="#" class="back">返回</a>
+			<h1>魔镜</h1>
+			<a href="#" class="more"></a>
+		</div>
+		
+		<div class="body">
+			<div class="imgBox">
+				<img src="img/记录页.png"/>
+			</div>
+			
+			<div class="main">
+				<div class="logo">
+					<img src="img/整合透底.png" />
+				</div>
+				<div class="content">
+					<p>葡萄藤轻游戏专注于桌游领域，提供在线杀人游戏，捉鬼，炸狼堡等多种聚会游戏，以下线下聚会桌游道具。</p>
+				</div>
+				<div class="circle1">
+					<img src="img/人员.png" />
+					<p>人员</p>
+				</div>
+				<div class="circle2">
+					<img src="img/葡萄藤logo.png" />
+					<p>葡萄藤</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

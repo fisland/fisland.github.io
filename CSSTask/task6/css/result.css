@@ -1,0 +1,161 @@
+html{
+	font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+	font-size: 65%;
+}
+@media (max-width: 321px) {
+	html{
+        font-size: 30%;
+	}
+}
+@media (min-width: 321px) and (max-width: 481px) {
+	html{
+		font-size: 40%;
+	}
+}
+@media (min-width: 481px) and (max-width: 641px) {
+	html{
+		font-size: 50%;
+	}
+}
+@media (min-width: 768px){
+	body{
+		margin: 0 auto;
+        width: 768px;
+	}
+	footer{
+		margin: 0 auto;
+		width: 768px !important;
+	}
+}
+
+.wrap{
+	min-width: 320px;
+	max-width: 768px;
+	background: #FFF;
+}
+header{
+	position: relative;
+	padding: 2rem 0 ;
+	text-align: center;
+	background: #29bde0;
+	color: white;
+	border-bottom: 1px solid #74d4eb;
+}
+header h1{
+	font-size: 3.4rem;
+	line-height: 3.4rem;
+}
+header .home{
+	cursor: pointer;
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	width: 3rem;
+	height: 3rem;
+	background: url(../img/home.png);
+	background-size:3rem 3rem ;
+}
+header .info{
+	cursor: pointer;
+	position: absolute;
+	top: 30%;
+	right: 5%;
+	width: 3rem;
+	height: 3rem;
+	background: url(../img/information.png);
+	background-size:3rem 3rem ;
+}
+.content{
+	position: relative;
+	width: 100%;
+}
+.content-header{
+	background: #29bde0;
+	color: white;
+	padding-top: 2rem;
+}
+.content-header .prize{
+	position: relative;
+	width: 20rem;
+	height: 12rem;
+	background: url(../img/win.png) no-repeat;
+	background-size:20rem 12rem ;
+	margin: 0px auto;
+}
+.content-header .prize p{
+	position: absolute;
+	top: 70%;
+	left: 30%;
+	font-size: 2.4rem;
+}
+.content-header .describe
+{
+	width:  80%;
+	margin: 0 auto;
+	font-size:3.2rem ;
+	color: #ffc865;
+}
+.content-header .result-analysis
+{
+
+	width: 80%;
+	margin: 1.5rem auto;
+	font-size:2.6rem ;
+	font-weight: normal;
+	color: white;
+	padding-bottom:1rem ;
+}
+.content-list{
+	width: 100%;
+}
+.content-list .day-result-list{
+	width:  80%;
+	margin: 0 auto;
+}
+.content-list h2{
+	font-size: 2.2rem;
+	color: #515151;
+}
+.content-list .day-result-list .day-result > p{
+	color: #a6a6a6;
+	font-size: 2rem;
+}
+.content .day-result
+{
+	position: relative;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid #A6A6A6;
+}
+.content-list .time
+{
+	font-size: 1.6rem;
+	color: #CCCCCC;
+	position: absolute;
+	top: 10%;
+	right: 5%;
+}
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0,205,255,0.5);
+	padding: 1.5rem 0;
+	font-size:0 ;
+}
+
+.foot-button{
+	width: 46%;
+	height: 4rem;
+	text-align: center;
+	margin:0 2%;
+	font-size: 3.2rem;
+	line-height:3.2rem;
+	/*font-weight: 600;*/
+	border: none;
+	border-radius: 0.5rem;
+	background: #f66f6f;
+	color: white;
+}
+.share-button{
+	background: #fbb435;
+}

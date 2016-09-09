@@ -1,0 +1,122 @@
+html{
+	font-size: 10px;
+	font-family: "微软雅黑";
+}
+img{
+	width: 100%;
+}
+
+.wrap{
+	position: relative;
+	width: 100%;
+	max-width: 700px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+.Top-bar{
+	position: absolute;
+	background: #5FC0CD;
+	width: 100%;
+	padding: 6% 0;
+}
+.button1,.button2{
+	position: absolute;
+	top: 12%;
+	width: 20%;
+	color: white;
+	background: #55a8b3;
+	border: none;
+	border-radius: 0.5rem;
+	/*font-size: 3.6rem;*/
+		font-size: 1.6rem;
+
+	padding: 1%;
+	z-index: 3;
+}
+.button1{left: 28%;}
+.button2{left: 47%;}
+.active{color: #55A8B3; background: white;}
+.button1:hover,.button2:hover{z-index: 5;background-color: white;color: #55A8B3;}
+
+.Top-bar a{
+	position: absolute;
+	right: 2%;
+	top: 20%;
+	width: 5%;
+}
+.nav{
+	position: absolute;
+	padding: 15% 0 2% 0;
+	width: 100%;
+	color: #999999;
+	font-size: 2.8rem;
+	border-bottom: 1px solid #E1E5E7;
+}
+.nav-bar{
+	width: 31%;
+	text-align: center;
+	border-right: 1px #E1E5E7 solid;
+	padding-right: 1rem;
+}
+.nav-bar:nth-last-of-type(1){ border-right: none;}
+.nav-bar img{
+	width: 8%;
+	padding-top:4% ;
+}
+.table{
+	position: absolute;
+	padding-top: 21%;
+	padding-bottom: 15%;
+	color: #999999;
+	width: 100%;
+	font-size: 2.8rem;
+}
+.table .cell{
+	width: 95%;
+	border-bottom: 1px solid #E1E5E7;
+	padding: 3% 0 3% 3%;
+}
+.cell img{
+	width:3.5%;
+}
+.cell p{
+	width: 90%;
+	color: black;
+	padding: 1.5% 0 1.5% 6%;
+}
+.cell .money{
+	color: red;
+	font-size: 3rem;
+	padding-right: 5%;
+}
+.cell span{
+	padding: 1rem;
+}
+.money img{
+	width: 10%;
+	padding-left: 1rem;
+}
+
+.foot{
+	position: fixed;
+	max-width: 700px;
+	min-width: 320px;
+	font-size: 2rem;
+	width: 100%;
+	background: #f8fafb;
+	bottom: 0;
+}
+.index1,.index3{
+	display: inline-block;
+	width: 8%;
+	text-align: center;
+	margin: 2% 16% 0 16%;
+	color: #5FC0CD;
+}
+.index2{
+	width: 15%;
+	display: inline-block;
+}
+.index3{
+	color: #999999;
+}

@@ -1,0 +1,145 @@
+html{
+	font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+	font-size: 65%;
+}
+@media (max-width: 321px) {
+	html{
+        font-size: 30%;
+	}
+}
+@media (min-width: 321px) and (max-width: 481px) {
+	html{
+		font-size: 40%;
+	}
+}
+@media (min-width: 481px) and (max-width: 641px) {
+	html{
+		font-size: 50%;
+	}
+}
+@media (min-width: 768px){
+	body{
+		margin: 0 auto;
+        width: 768px;
+	}
+	footer{
+		margin: 0 auto;
+		width: 768px !important;
+	}
+}
+
+.wrap{
+	min-width: 320px;
+	max-width: 768px;
+	background: #F0F0F0;
+}
+header{
+	position: relative;
+	padding: 1.5rem 0;
+	background: #29BDE0;
+}
+header h1{
+	text-align: center;
+	font-size: 3.4rem;
+	line-height: 3.4rem;
+	color: white;
+}
+header .menu{
+	cursor: pointer;
+	position: absolute;
+	left: 3%;
+	top: 35%;
+	width: 2rem;
+	height: 2rem;
+	background: url(../img/main-menu.png) no-repeat;
+	background-size:2rem 2rem ;
+}
+.content{
+	position: relative;
+	width: 100%;
+	padding-bottom: 5rem;
+}
+.content .head{
+	width: 95%;
+	background: white;
+	color: #9A9A9A;
+	margin: 2rem  auto;
+	border: 1px solid #ccc;
+	
+}
+.head p{
+	/*display: inline-block;*/
+	text-align: center;
+	font-size: 3.4rem;
+	line-height: 6rem;
+}
+.head span{
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	margin-top: 16px;
+	
+	right: 5%;
+	background: url(../img/forwardArrow.png) no-repeat;
+	background-size: 24px 40px;
+	width: 24px;
+	height: 40px;
+}
+
+.game{
+	width: 95%;
+	background: white;
+	color: #9A9A9A;
+	margin: 2rem  auto;
+	border: 1px solid #ccc;
+}
+.game-name{
+	width: 100%;
+	border-bottom: 1px solid #fbb435;
+	
+	color: #fbb435;
+	text-align: center;
+	font-size: 3.4rem;
+	line-height: 3.4rem;
+	margin: 1rem 0 1rem 0;
+	padding-bottom: 1rem;
+}
+
+.game-content{
+	width: 100%;
+	color: #9A9A9A;
+	text-align: center;
+}
+.game-cell{
+	width: 100%;
+	margin: 2rem auto;
+}
+.game-cell div{
+	width: 80%;
+	color: white;
+	padding: 2rem 0;
+	margin: 0 auto 1rem auto;
+	font-size: 2.8rem;
+	background: #69d1e9;
+}
+.game-cell p{
+	font-size: 2rem;
+}
+.next{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	background: url(../img/yellowTriangle.png) no-repeat;
+	background-size:28px 56px ;
+	width: 28px;
+	height: 56px;
+}
+.game-page{
+	background: url(../img/pageController.png) no-repeat;
+	background-size:94px 18px;
+	width: 94px;
+	height: 18px;
+	padding: 1rem 0;
+	margin: 0 auto;
+}

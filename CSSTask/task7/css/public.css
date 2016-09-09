@@ -1,0 +1,139 @@
+header{
+	
+}
+.status-bar{
+	position: relative;
+	display: block;
+	width: 90%;
+	height: 40px;
+	background: #FFF;
+	margin: 0 auto;
+}
+.tel a{
+	color: #29b078;
+	height: 40px;
+	line-height: 40px;
+	font: 14px;
+}
+.login{
+	position: absolute;
+	top: 10px;
+	right: 1%;
+}
+.login>i{
+	display: inline-block;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	margin-right:5px ;
+	background: url(../img/wechat-icon.png) no-repeat;
+}
+.login .qq{
+	background: url(../img/qq-icon.png) no-repeat;
+}
+.login .weibo{
+	background: url(../img/weibo-icon.png) no-repeat;
+}
+nav{
+	height: 100px;
+	background: #29b078;
+}
+
+nav ul{
+	list-style: none;
+	float: right;
+	margin: 0;
+	margin-right: 5%;
+}
+nav ul li{
+	box-sizing: border-box;
+	display: inline-block;
+	line-height: 0;
+	height: 100px;
+	width: 100px;
+	text-align: center;
+}
+nav ul li a{
+	display: inline-block;
+	text-decoration: none;
+	height: inherit;
+	line-height: 100px;
+	color: #FFF;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+nav ul li a:hover, nav .active{
+	border-bottom: 4px white solid;
+}
+
+footer{
+	background: #29B078;
+}
+footer .footer-content{
+	box-sizing: border-box;
+	width: 100%;
+	height: 170px;
+	border-bottom: 1px solid #32c086;
+}
+
+footer .footer-wraper{
+	width: 90%;
+	position: relative;
+	margin: 0 auto;
+}
+footer .footer-wraper .left-footer{
+	display: inline-block;
+	height: 170px;
+	color: #FFFFFF;
+}
+footer .footer-wraper .left-footer p{
+	height: 65px;
+	line-height: 65px;
+}
+footer .footer-wraper .left-footer a{
+	color: #FFFFFF;
+	height: 104px;
+	line-height: 104px;
+	
+}
+footer .middle-footer{
+	display: inline-block;
+	position: absolute;
+	left: 30%;
+	top: 15%;
+}
+footer .middle-footer .web{
+	margin-bottom: 30px;
+}
+footer .middle-footer .weblink{
+	padding-bottom: 30px;
+}
+footer .middle-footer .weblink a:hover{
+	border-bottom: 1px solid white;
+}
+footer .middle-footer a{
+	margin-right: 10px;
+}
+footer .middle-footer a,footer .middle-footer span{
+	color: white;
+	font: 16px;
+}
+
+footer .right-footer{
+	position: absolute;
+	right: 10%;
+	top: 10%;
+}
+footer .icon p{
+	color: #FFFFFF;
+	margin: 10px 0;
+}
+footer .copy-right{
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 30px;	
+}

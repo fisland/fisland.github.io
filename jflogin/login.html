@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>登录注册</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="logo">
+				<img src="img/change_05.png" />
+			</div>
+			<div class="sub-wrap">
+				<div class="login-register-wrap">
+					<div class="login-register-bar clearFix">
+						<div class="fl">
+							<a href="javascript:;" class="active login-bar" id="login-wrap">登录</a>
+						</div>
+						<div class="fl">
+							<a href="javascript:;" class="register-bar" id="register-wrap">注册</a>
+						</div>
+					</div>
+
+					<div class="login-wrap">
+						<form action="" method="post" class="login">
+							<div class="textfield">
+								<span class="login-login-icon"></span>
+								<input type="text" name="loginName" id="loginName" value="" />
+							</div>
+							<div class="textfield">
+								<span class="login-pass-icon"></span>
+								<input type="password" name="loginPass" id="loginPass" value="" />
+							</div>
+
+							<div class="help-wrap clearFix">
+								<a href="#" class="remeber active"></a>
+								<span>下次自动登录</span>
+								<a href="#" class="forget-btn fr" id="forget-btn">忘记密码？</a>
+							</div>
+
+							<input type="submit" value="登 录" />
+						</form>
+					</div>
+
+					<div class="register-wrap" style="display: none;">
+						<form action="" method="post" class="register">
+							<div class="textfield">
+								<span class="login-email-icon"></span>
+								<input type="text" name="loginEmail" id="registerEmail" value="" placeholder="请输入电子邮箱" />
+							</div>
+							<div class="textfield">
+								<span class="login-login-icon"></span>
+								<input type="text" name="loginName" id="registerName" value="" placeholder="请输入昵称" />
+							</div>
+							<div class="textfield">
+								<span class="login-pass-icon"></span>
+								<input type="password" name="loginPass" id="registerPass" value="" placeholder="请输入密码" />
+							</div>
+
+							<input type="submit" value="注 册" />
+						</form>
+					</div>
+
+				</div>
+				<div class="forget-wrap" style="display: none;">
+					<div class="forget-wrap-bar">
+						<div class="">
+							<a href="#forget-wrap" class="forget-bar" id="forget-wrap">忘记密码</a>
+						</div>
+					</div>
+					<div class="forget">
+						<div class="textfield">
+							<span class="login-email-icon"></span>
+							<input type="text" name="forgetEmail" id="forgetEmail" value="" placeholder="请输入电子邮箱" />
+						</div>
+						<div class="verify-filed clearFix">
+							<input type="text" name="forgetCode" id="forgetCode" value="" placeholder="请输入验证码" class="fl" />
+							<span class="verify-img fr"></span>
+							<span class="fr"><a href="#">看不清？换一张</a></span>
+						</div>
+						<input type="submit" value="发送重置邮件" id="reset-btn" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--js-->
+		<!-- jQuery文件。 -->
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/login.js"></script>
+	</body>
+	
+
+</html>

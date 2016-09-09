@@ -1,0 +1,222 @@
+.main{
+	background-color: #FFFFFF
+}
+.main-nav-box{
+	overflow: hidden;
+}
+.main-nav{
+	float: right;
+	max-width: 630px;
+	width: 100%;
+}
+
+.main-nav li{
+	float: left;
+	width: 25%;
+	padding-top: 24px;
+}
+.main-nav a{
+	display:block;
+	font-size: 16px;
+	line-height: 84px;
+	color: #ccc;
+	text-align: center;
+	text-decoration: none;
+}
+.nav-border{
+	position: relative;
+	top: 7px;
+	height: 5px;
+	border-radius: 11%;
+}
+.nav-border p{
+	position: absolute;
+	top: -7px;
+	left: 46%;
+	width: 20px;
+	height: 20px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 50%;
+	color: white;
+}
+.nav-border,
+.nav-border p{
+    background: #CCCCCC;
+}
+.main-nav li:hover a
+,.main-nav li:first-child a{
+    color:#ff7f02;
+}
+.main-nav li:hover .nav-border,
+.main-nav li:hover .nav-border p,
+.main-nav li:first-child .nav-border,
+.main-nav li:first-child .nav-border p {
+    background: #ff7f02;
+}
+.main-nav li:hover .nav-border p,
+.main-nav li:first-child .nav-border p{
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    line-height: 24px;
+}
+h2.main-header
+{
+	 margin: 15px 0 22px 0;
+	padding-left: 6px;
+	font-size: 22px;
+	line-height: 22px;
+	border-left: solid 4px #1D7AD9;
+}
+.custom{
+	border-radius: 6px 6px 0 0;
+}
+.custom .row li{
+    text-align: center;
+}
+.custom>li{
+    position: relative;
+}
+.custom>li:nth-child(2n+1){
+	padding: 16px;
+	font-size: 18px;
+	line-height: 18px;
+	color: #1D7AD9;
+	background: linear-gradient(top,#f5f5f5,#f1f1f1);
+	background: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+    background: -moz-linear-gradient(top,#f5f5f5,#f1f1f1);
+}
+.custom>li:nth-child(2n){
+	margin: 0;
+	color: #666;
+	border: 1px #e8e8e8 solid;
+}
+.sprite{
+	display: inline-block;
+	margin-right: 6px;
+	vertical-align: middle;
+	width: 22px;
+	height: 20px;
+	background: url(../img/spritesheet.png) no-repeat;
+}
+.custom>li:nth-child(1) .sprite{
+	width: 19px;
+    height: 15px;
+    background-position: -5px -5px;
+}
+.custom>li:nth-child(3) .sprite{
+    width: 22px;
+    height: 20px;
+    background-position: -59px -5px;
+}
+.custom>li:nth-child(5) .sprite{
+	width: 15px;
+    height: 20px;
+    background-position: -34px -5px;
+}
+input[type="radio"]{
+	position: absolute;
+	opacity: 0;
+}
+label{
+	display: inline-block;
+	margin: 36px 0 35px 50px;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 400;
+}
+.input-style{
+	display: inline-block;
+	margin-right: 14px;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #d7d7d7;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.input-style:after{
+    display: block;
+    margin: 6px auto;
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+}
+input[type="radio"]:checked+.input-style{
+	background: #1D7AD9;
+	border-color: #D7D7D7;
+}
+.custom>li:nth-child(4){
+    padding-bottom: 36px;
+}
+.box-size li{
+    margin-top: 36px;
+    text-align: center;
+    box-sizing: border-box;}
+    
+input[type="text"]{
+	width: 68px;
+	height: 28px;
+	border: 1px #E8E8E8 solid;
+}
+.row{
+    margin: 0;
+}
+.box-size label{
+    margin: 0;
+}
+
+select{
+	margin: 25px 0 25px 0;
+    padding: 4px 4px 4px 17px;
+    width: 130px;
+    font-size: 14px;
+    line-height: 29px;
+    color: #999999;
+    border: 1px #e8e8e8 solid;
+    background: url(../img/trangle.png) 99px no-repeat;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+}
+.custom>li:nth-child(7){
+	background: #FFFFFF;
+	height: 285px;
+	border: 1px solid #E7E7E7;
+	border-top: 0;
+}
+.custom>li:nth-child(7) a{
+	display: block;
+	margin: 143px auto 98px auto;
+	width: 180px;
+	height: 46px;
+	font-size: 24px;
+	line-height: 46px;
+	text-align: center;
+	background: #e15053;
+	color: #FFFFFF;
+	cursor: pointer;
+	border-radius: 5px;
+	text-decoration: none;
+}
+@media (min-width: 1200px) {
+    .box-size select{
+        position: absolute;
+        right: 32px;
+        top: -62px;
+    }
+}
+@media (max-width: 1200px) {
+
+    .box-size > li:nth-child(4) {
+        margin-top: 36px;
+    }
+
+    .box-size > li:nth-child(4) select {
+        display: block;
+        margin: auto;
+    }
+}

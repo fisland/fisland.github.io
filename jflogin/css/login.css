@@ -1,0 +1,270 @@
+body {
+	background: #f5f5f5;
+	min-width: 768px;
+}
+
+.wrap {
+	width: 800px;
+	margin: 0 auto;
+	background: #ffffff;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.logo {
+	width: 132px;
+	height: 198px;
+	margin: 0 auto;
+	padding: 80px 0 40px 0;
+}
+
+.logo img {
+	width: 100%;
+}
+
+.sub-wrap {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.login-register-bar {
+	margin-bottom: 30px;
+}
+
+.login-register-bar div {
+	display: inline-block;
+	width: 50%;
+}
+
+.login-register-bar a {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 20px;
+	color: #777;
+	padding: 10px;
+}
+
+.login-register-bar a:hover,
+.login-register-bar a.active {
+	border-bottom: 2px solid #47a5d8;
+}
+
+.login-bar {
+	margin-left: 120px;
+}
+
+.register-bar {
+	margin-left: 20px;
+}
+
+.login-wrap {
+	width: 100%;
+}
+
+.register-wrap {
+	width: 100%;
+}
+
+.textfield {
+	margin: 10px 50px;
+	padding: 2px;
+	border: 1px solid #c9c9c9;
+	border-radius: 5px;
+}
+
+.textfield span {
+	display: inline-block;
+	vertical-align: middle;
+	height: 30px;
+	width: 30px;
+}
+
+.textfield span:after {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 4px;
+	content: '';
+	width: 1px;
+	height: 22px;
+	padding-left: 35px;
+	border-right: 1px solid #c9c9c9;
+}
+
+span.login-login-icon {
+	background: url(../img/login_3.png) no-repeat;
+	background-size: 20px;
+	background-position: center;
+}
+
+span.login-pass-icon {
+	background: url(../img/login_4.png) no-repeat;
+	background-size: 20px;
+	background-position: center;
+}
+
+span.login-email-icon {
+	background: url(../img/login_2.png) no-repeat;
+	background-size: 20px;
+	background-position: center;
+}
+
+input[type="text"],
+input[type="password"] {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 12px;
+	width: 200px;
+	outline: none;
+	-moz-outline: none;
+}
+
+input[type="submit"] {
+	display: block;
+	width: 76%;
+	margin: 20px auto;
+	text-align: center;
+	/*padding: 10px;*/
+	font-size: 14px;
+	height: 40px;
+	color: white;
+	background: #3dbc8f;
+	border-radius: 6px;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.register-wrap input[type="submit"] {
+	margin-top: 30px;
+}
+
+.help-wrap {
+	width: 76%;
+	margin: 20px auto 40px auto;
+	border: none;
+}
+
+.help-wrap .remeber {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	height: 20px;
+	width: 20px;
+	background: url(../img/login_choice_normal.png) no-repeat;
+	background-size: contain;
+}
+
+.help-wrap span {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 24px;
+	color: #8d8d8d;
+}
+
+.help-wrap .remeber.active {
+	background: url(../img/login_choice_selected.png) no-repeat;
+	background-size: contain;
+}
+
+.help-wrap .forget-btn {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 24px;
+	color: #3DBC8F;
+}
+
+.forget-wrap-bar {
+	text-align: center;
+}
+
+.forget-wrap-bar a {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 20px;
+	color: #777;
+	padding: 10px;
+}
+
+.verify-filed {
+	margin: 10px 50px;
+	margin-bottom: 20px;
+}
+
+.verify-filed input {
+	width: 46%;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #c9c9c9;
+	border-radius: 5px;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.verify-filed .verify-img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 43%;
+	height: 30px;
+	background: url(../img/verifyCode.png) no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 5px;
+}
+
+.verify-filed a {
+	width: 50%;
+	text-align: center;
+	font-size: 12px;
+	color: #47a5d8;
+	padding: 15px;
+	margin-top: 5px;
+}
+
+@media (max-width:768px) {
+	.wrap {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+	}
+	.login-register-bar {
+		margin-bottom: 5px;
+	}
+	.login-register-bar div {
+		width: 48%;
+		text-align: center;
+		height: 40px;
+	}
+	.login-bar,
+	.register-bar {
+		margin-left: 0;
+		text-align: center;
+	}
+	.textfield {
+		margin: 10px 0;
+		padding: 2px;
+		border: 1px solid #c9c9c9;
+		border-radius: 5px;
+	}
+	.textfield input[type="text"],
+	.textfield input[type="password"] {
+		width: 120px;
+	}
+	.help-wrap {
+		width: 100%;
+		margin: 0;
+	}
+	.verify-filed {
+		margin: 0;
+	}
+	.verify-filed a {
+		padding: 0;
+	}
+	input[type="submit"]{
+		width: 100%;
+	} 
+}

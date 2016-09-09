@@ -1,0 +1,90 @@
+fieldset{
+    border-radius: 15px;
+}
+
+fieldset label{
+
+}
+input[type="radio"]{
+    display: none;
+}
+label{
+    padding: 7px;
+    border: 1px solid #000041;
+    background: #ffffff;
+    color: #000041;
+    font-size: 20px;
+    line-height:30px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+label.checked{
+    background: #000041;
+    color: #ffffff;
+}
+
+select{
+    margin: 0px 0 0px 50px;
+    padding: 4px 4px 4px 17px;
+    width: 130px;
+    font-size: 14px;
+    line-height: 29px;
+    color: #000041;
+    border: 1px #000041 solid;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.aqi-chart-wrap{
+    position: relative;
+    width: 98%;
+    height: 550px;
+    margin: 20px auto 0 auto;
+    border:1px solid #242424;
+    box-shadow:4px 4px 5px  #999; /*左边阴影*/
+    /*10px 0 3px  #999, !*右边阴影*!*/
+    /*0 -10px 3px  #999, !*顶部阴影*!*/
+    /*0 10px 3px  #999; !*底边阴影*!*/
+    border-radius: 15px;
+    overflow: hidden;
+
+}
+@keyframes heightAnim {
+    0% {
+        bottom: -300px;
+    }
+    100% {
+        bottom: 0;
+    }
+
+}
+.aqi-bar{
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    animation: heightAnim .5s ease-in-out;
+}
+.aqi-hint{
+    position: absolute;
+    display: none;
+    width: 120px;
+    border: 1px solid #16324a;
+    background-color: white;
+    z-index: 999;
+    font-size: .75rem;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #dddddd;
+    opacity: .8;
+}
+.show + div {
+    display: block;
+}
+.title {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 10px;
+}

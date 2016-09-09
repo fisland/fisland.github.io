@@ -1,0 +1,124 @@
+html{
+	font-size: 10px;
+	font-family: "微软雅黑";
+}
+img{
+	width: 100%;
+}
+
+.wrap{
+	position: relative;
+	width: 100%;
+	max-width: 700px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+.Top-bar{
+	width: 100%;
+	background: #5fc0cd;
+	padding: 1.5rem 0;
+	font-size: 3rem;
+	color: white;
+}
+.Top-bar a{
+	position: absolute;
+	left: 3%;
+}
+.Top-bar p{
+	text-align: center;
+}
+.user{
+	width: 100%;
+	padding: 20% 0;
+	background-size: cover;
+	font-size: 3.6rem;
+	background: url(../img/user-background.png);
+}
+.user-img{
+	position: absolute;
+	width: 20%;
+	top: 40%;
+	left: 7%;
+	border-radius:50%;
+}
+.user-name{
+	position: absolute;
+	top: 50%;
+	left: 35%;
+}
+.user-name p{
+	font-size: 2.4rem;
+	padding: 3% 0 0 15%;
+	background: url(../img/Shape-blue.png) no-repeat 0.3rem 0.7rem/1.6rem 1.8rem;
+}
+.introduce{
+	position: absolute;
+	width: 100%;
+	font-size: 3.6rem;
+	color: black;
+}
+.header{
+	padding: 3%;
+}
+.strip{
+	border: 0.1rem solid #5fc0cd;
+	margin: 3%;
+}
+ul{
+	position: relative;
+	padding: 2% 0 2% 5%;
+	border-top: 1px solid #e1e5e7;
+	border-bottom: 1px solid #e1e5e7;
+}
+li{
+	border-bottom: 1px solid #E1E5E7;
+	padding: 2% 5%;
+}
+li:nth-last-of-type(1){
+	border: none;
+	/*padding: 6%;*/
+}
+.star{
+		background: url(../img/start.png) no-repeat;
+		padding: 0 3% 0 6%;
+}
+.strip1{
+	border: 0.1rem solid #E1E5E7;
+	margin: 3%;
+}
+.detail{
+	color: #999999;
+	padding-right: 3%;
+}
+.red{
+	color: red;
+}
+.describe{
+	position: absolute;
+    	/*bottom: 4%;*/
+    	font-size:2.5rem;
+    	width: 55%; 
+}
+.footer{
+	position: absolute;
+	top: 750px;
+	width: 90%;
+	padding: 12% 5% 7% 5%;
+	margin: 0 auto;
+}
+.button1,.button2{
+	border: 0.1rem solid #5FC0CD;
+	border-radius: 0.5rem;
+	font-size: 3.4rem;
+	width: 48%;
+	padding: 3%;
+}
+.button1{
+	color: #5FC0CD;
+	background: white;
+}
+.button2{
+	color: white;
+	background: #5FC0CD;
+}

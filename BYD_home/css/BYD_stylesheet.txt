@@ -1,0 +1,83 @@
+.sprite {
+    background-image: url(BYD_spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-DIY {
+    width: 49px;
+    height: 49px;
+    background-position: -5px -5px;
+}
+
+.sprite-booking {
+    width: 49px;
+    height: 49px;
+    background-position: -64px -5px;
+}
+
+.sprite-car_pic1 {
+    width: 101px;
+    height: 53px;
+    background-position: -123px -5px;
+}
+
+.sprite-car_pic2 {
+    width: 102px;
+    height: 53px;
+    background-position: -5px -68px;
+}
+
+.sprite-car_pic3 {
+    width: 102px;
+    height: 53px;
+    background-position: -117px -68px;
+}
+
+.sprite-car_pic4 {
+    width: 102px;
+    height: 53px;
+    background-position: -5px -131px;
+}
+
+.sprite-car_pic5 {
+    width: 101px;
+    height: 53px;
+    background-position: -117px -131px;
+}
+
+.sprite-car_pic6 {
+    width: 102px;
+    height: 53px;
+    background-position: -5px -194px;
+}
+
+.sprite-car_pic7 {
+    width: 102px;
+    height: 53px;
+    background-position: -117px -194px;
+}
+
+.sprite-car_pic8 {
+    width: 101px;
+    height: 53px;
+    background-position: -234px -5px;
+}
+
+.sprite-logo {
+    width: 78px;
+    height: 48px;
+    background-position: -229px -68px;
+}
+
+.sprite-maintain {
+    width: 49px;
+    height: 49px;
+    background-position: -317px -68px;
+}
+
+.sprite-relation {
+    width: 49px;
+    height: 49px;
+    background-position: -229px -127px;
+}

@@ -1,0 +1,164 @@
+@charset "utf-8";
+/*1200px框*/
+.wrap-sub{
+    max-width: 1200px;
+    width:100%;
+    margin: auto;
+    background: transparent;
+    overflow: hidden;
+}
+.header-top{
+	height: 40px;
+	background: #1d7ad9;
+}
+.header span{
+	font: 14px;
+}
+.header span,.login-bar li{
+	line-height: 40px;
+	color: #fff;
+}
+.login-bar{
+	float: right;
+	border-left: 1px white solid;
+}
+.login-bar li{
+	float: left;
+}
+.login-bar a{
+	display: block;
+	width: 54px;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	transition: width 0.3s,color 1s, background 1s; 
+}
+.login-bar a:hover{
+	color: black;
+	width: 104px;
+	background: white;
+}
+.navbar-default{
+	background-color: transparent;
+	margin-bottom: 0;
+	border: none;
+}
+.header-nav{
+	background: #f9f9f9;
+	overflow: hidden;
+}
+.ul-nav{
+	float: right;
+	padding-right: 2px;
+}
+.ul-nav li{
+	float: left;
+	margin: 28px 0 25px 60px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 0 rgba(3,3,3,0.17);
+}
+.ul-nav a{
+	display: block;
+	padding: 16px 17px;
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
+	background: white;
+	border-radius: 5px;
+}
+.navbar-default .ul-nav>.active>a,
+.navbar-default .ul-nav>.active>a:focus,
+.navbar-default .ul-nav>.active>a:hover,
+.navbar-default .ul-nav>li>a:hover {
+    color: white;
+    background: #1d7ad9;
+}
+/*footer*/
+.container-fluid{
+	padding: 0;
+}
+.row>li{
+	padding: 0;
+	font-size: 14px;
+	line-height: 14px;
+	color: #999;
+}
+footer{
+	background: #F9F9F9;
+	margin-top: 50px;
+}
+.footer-nav{
+	padding-bottom: 50px;
+}
+.footer-nav>li{
+	margin-top: 70px;
+}
+.footer-nav-us{
+	width: 300px;
+}
+.footer-nav-us li{
+	float: left;
+	margin-bottom: 20px;
+	width: 33.33%;
+}
+.footer-nav-us a{
+	color: #999;
+}
+.footer-nav-us a:hover, a.active{
+	color: #1D7AD9;
+	text-decoration: none;
+}
+.information{
+	float: right;
+	width: 245px;
+}
+.information li:first-child{
+	float: right;
+	position: relative;
+	top: 0px;
+}
+.information li:nth-child(n+2){
+	line-height: 29px;
+}
+
+.footer-bottom{
+	font-size: 12px;
+	line-height: 33px;
+	color: white;
+	text-align: center;
+	background: #1D7AD9;
+}
+@media only screen and (max-width: 1200px) {
+	.footer-nav{
+		margin: 0;
+		text-align: center;
+	}
+	.footer-nav ul{
+		float: none;
+		margin: auto;
+	}
+}
+@media only screen and (max-width:768px ) {
+	.navbar-collapse{
+		padding: 0;
+	}
+	.ul-nav{
+		margin: 0;
+		width: 100%;
+	}
+	.ul-nav li{
+		margin: 0;
+		width: 100%;
+		height: 50px;
+		border-radius: 0;
+		
+	}
+	.ul-nav li a{
+		padding: 0;
+		line-height: 50px;
+		border-radius: 0;
+		text-align: center;
+	}
+}
