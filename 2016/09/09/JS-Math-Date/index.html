@@ -1,0 +1,946 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="JavaScript 数字和日期数字数字都是双精度浮点类型。3个符号值：+Infinity、-Infinity、NaN没有特定的数据类型为整型
+
+十进制可以0开头，大于8，十进制，小于则是八进制。
+二进制0开头 0b，0B
+八进制0开头 后面0~7
+十六进制0x，0X
+指数E,e
+
+数字对象Number
+属性
+
+
+
+属性
+描述
+
+
+
+
+MAX_VALUE
+可表示的最大值
+
+
+MIN_VALUE
+可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS学习笔记 数字和日期">
+<meta property="og:url" content="http://yoursite.com/2016/09/09/JS-Math-Date/index.html">
+<meta property="og:site_name" content="Fisland Home">
+<meta property="og:description" content="JavaScript 数字和日期数字数字都是双精度浮点类型。3个符号值：+Infinity、-Infinity、NaN没有特定的数据类型为整型
+
+十进制可以0开头，大于8，十进制，小于则是八进制。
+二进制0开头 0b，0B
+八进制0开头 后面0~7
+十六进制0x，0X
+指数E,e
+
+数字对象Number
+属性
+
+
+
+属性
+描述
+
+
+
+
+MAX_VALUE
+可表示的最大值
+
+
+MIN_VALUE
+可">
+<meta property="og:updated_time" content="2016-09-09T13:56:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS学习笔记 数字和日期">
+<meta name="twitter:description" content="JavaScript 数字和日期数字数字都是双精度浮点类型。3个符号值：+Infinity、-Infinity、NaN没有特定的数据类型为整型
+
+十进制可以0开头，大于8，十进制，小于则是八进制。
+二进制0开头 0b，0B
+八进制0开头 后面0~7
+十六进制0x，0X
+指数E,e
+
+数字对象Number
+属性
+
+
+
+属性
+描述
+
+
+
+
+MAX_VALUE
+可表示的最大值
+
+
+MIN_VALUE
+可">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/09/09/JS-Math-Date/"/>
+
+  <title> JS学习笔记 数字和日期 | Fisland Home </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Fisland Home</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-essay">
+          <a href="/categories/随笔" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
+            
+            随笔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-write">
+          <a href="/categories/写作" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil"></i> <br />
+            
+            写作
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-read">
+          <a href="/categories/阅读" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            阅读
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-html">
+          <a href="/categories/前端" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-html5"></i> <br />
+            
+            前端
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-study">
+          <a href="/categories/学习" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-fa-graduation-cap"></i> <br />
+            
+            学习
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-code">
+          <a href="/categories/编程" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />
+            
+            编程
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                JS学习笔记 数字和日期
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-09T17:18:46+08:00" content="2016-09-09">
+              2016-09-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/09/JS-Math-Date/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/09/JS-Math-Date/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="JavaScript-数字和日期"><a href="#JavaScript-数字和日期" class="headerlink" title="JavaScript 数字和日期"></a>JavaScript 数字和日期</h1><h2 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h2><p>数字都是双精度浮点类型。3个符号值：<br>+Infinity、-Infinity、NaN<br><strong>没有特定的数据类型为整型</strong></p>
+<ul>
+<li>十进制<br>可以0开头，大于8，十进制，小于则是八进制。</li>
+<li>二进制<br>0开头 0b，0B</li>
+<li>八进制<br>0开头 后面0~7</li>
+<li>十六进制<br>0x，0X</li>
+<li>指数<br>E,e</li>
+</ul>
+<h2 id="数字对象"><a href="#数字对象" class="headerlink" title="数字对象"></a>数字对象</h2><p>Number</p>
+<p><strong>属性</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">MAX_VALUE</td>
+<td style="text-align:center">可表示的最大值</td>
+</tr>
+<tr>
+<td style="text-align:center">MIN_VALUE</td>
+<td style="text-align:center">可表示的最小值</td>
+</tr>
+<tr>
+<td style="text-align:center">NaN</td>
+<td style="text-align:center">特指”非数字“</td>
+</tr>
+<tr>
+<td style="text-align:center">NEGATIVE_INFINITY</td>
+<td style="text-align:center">特指“负无穷”;在溢出时返回</td>
+</tr>
+<tr>
+<td style="text-align:center">POSITIVE_INFINITY</td>
+<td style="text-align:center">特指“正无穷”;在溢出时返回</td>
+</tr>
+<tr>
+<td style="text-align:center">EPSILON</td>
+<td style="text-align:center">Difference between one and the smallest value greater than one that can be represented as a Number.</td>
+</tr>
+<tr>
+<td style="text-align:center">MIN_SAFE_INTEGER</td>
+<td style="text-align:center">JavaScript最小安全整数.</td>
+</tr>
+<tr>
+<td style="text-align:center">.MAX_SAFE_INTEGER</td>
+<td style="text-align:center">JavaScript最大安全整数.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>方法</strong>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Method</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Number.parseFloat()</td>
+<td style="text-align:center">把字符串参数解析成浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center">Number.parseInt()</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Number.isFinite()</td>
+<td style="text-align:center">判断传递的值是否为有限数字。</td>
+</tr>
+<tr>
+<td style="text-align:center">Number.isInteger()</td>
+<td style="text-align:center">判断传递的值是否为整数。</td>
+</tr>
+<tr>
+<td style="text-align:center">Number.isNaN()</td>
+<td style="text-align:center">判断传递的值是否为 NaN.</td>
+</tr>
+<tr>
+<td style="text-align:center">Number.isSafeInteger()</td>
+<td style="text-align:center">判断传递的值是否为安全整数。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Methods of Number.prototype</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Method</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">toExponential()</td>
+<td style="text-align:center">返回一个数字的指数形式的字符串，形如：1.23e+2</td>
+</tr>
+<tr>
+<td style="text-align:center">toFixed()</td>
+<td style="text-align:center">返回指定小数位数的表示形式，var a=123,b=a.toFixed(2)//b=”123.00”</td>
+</tr>
+<tr>
+<td style="text-align:center">toPrecision()</td>
+<td style="text-align:center">返回一个指定精度的数字。如下例子中，a=123中，3会由于精度限制被迫消失.var a=123,b=a.toPrecision(2)//b=”1.2e+2”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Math-object"><a href="#Math-object" class="headerlink" title="Math object"></a>Math object</h2><p>对于内置的<em>Math</em>数学常项和函数也有一些函数和方法</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Method</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">abs()</td>
+<td style="text-align:center">绝对值</td>
+</tr>
+<tr>
+<td style="text-align:center">sin(), cos(), tan()</td>
+<td style="text-align:center">标准三角函数;参数为弧度</td>
+</tr>
+<tr>
+<td style="text-align:center">asin(), acos(), atan(), atan2()</td>
+<td style="text-align:center">反三角函数; 返回值为弧度</td>
+</tr>
+<tr>
+<td style="text-align:center">sinh(), cosh(), tanh()</td>
+<td style="text-align:center">双曲三角函数; 返回值为弧度.</td>
+</tr>
+<tr>
+<td style="text-align:center">asinh(), acosh(), atanh()</td>
+<td style="text-align:center">反双曲三角函数;返回值为弧度.</td>
+</tr>
+<tr>
+<td style="text-align:center">pow(), exp(), expm1(), log10(), log1p(), log2()</td>
+<td style="text-align:center">指数与对数函数</td>
+</tr>
+<tr>
+<td style="text-align:center">floor(), ceil()</td>
+<td style="text-align:center">返回最大/最小整数小于/大于或等于参数</td>
+</tr>
+<tr>
+<td style="text-align:center">min(), max()</td>
+<td style="text-align:center">Returns lesser or greater (respectively) of comma separated list of numbers arguments</td>
+</tr>
+<tr>
+<td style="text-align:center">random()</td>
+<td style="text-align:center">返回0和1之间的随机数。</td>
+</tr>
+<tr>
+<td style="text-align:center">round(), fround(), trunc(),</td>
+<td style="text-align:center">四舍五入和截断函数</td>
+</tr>
+<tr>
+<td style="text-align:center">sqrt(), cbrt(), hypot()</td>
+<td style="text-align:center">平方根，立方根，平方参数的和的平方根 Square root of the sum of square arguments.</td>
+</tr>
+<tr>
+<td style="text-align:center">sign()</td>
+<td style="text-align:center">数字的符号, 说明数字是否为正、负、零。</td>
+</tr>
+<tr>
+<td style="text-align:center">clz32(),imul()</td>
+<td style="text-align:center">在32位2进制表示中，开头的0的数量.The result of the C-like 32-bit multiplication of the two arguments</td>
+</tr>
+</tbody>
+</table>
+<p>只能使用内建立的math对象</p>
+<h2 id="日期对象"><a href="#日期对象" class="headerlink" title="日期对象"></a>日期对象</h2><p>Date对象有大量的设置、获取和操作日期的方法。 它并不含有任何属性。<br>创建一个日期对象：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dateObject = <span class="keyword">new</span> <span class="built_in">Date</span>([parameters]);</span><br></pre></td></tr></table></figure>
+<h4 id="parameters"><a href="#parameters" class="headerlink" title="parameters:"></a>parameters:</h4><ul>
+<li>无参数:创建今天的日期和时间</li>
+<li>一个符合以下格式的字符串”MM dd,yy hh:mm:ss”。如果省略时分秒，那么值为0</li>
+<li>一个年，月，日的整数值得集合，var Xmas = new Date(1995,11,25).</li>
+<li>一个年，月，日，时，分，秒的集合，var Xmas = new Date(1995,11,25,9,30,0);</li>
+</ul>
+<h4 id="Date对象的方法"><a href="#Date对象的方法" class="headerlink" title="Date对象的方法"></a>Date对象的方法</h4><ul>
+<li>“Set”,用于设置Date</li>
+<li>“Get”,获取Date</li>
+<li>“To”,用于返回Date对象的字符串格式的值</li>
+<li>parse和UTC方法，用于解析Date字符串</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> endYear = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>,<span class="number">11</span>,<span class="number">30</span>,<span class="number">23</span>,<span class="number">59</span>,<span class="number">59</span>,<span class="number">999</span>);</span><br><span class="line">endYear.setFullYear(today.getFullYear);</span><br><span class="line"><span class="keyword">var</span> msPerDay = <span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>;</span><br><span class="line"><span class="keyword">var</span> daysLeft = (endYear.getTime() - today.getTime())/msPerDay;</span><br><span class="line">daysLeft = <span class="built_in">Math</span>.round(daysLeft);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="数字和日期-MDN"><a href="#数字和日期-MDN" class="headerlink" title="数字和日期 MDN"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates" target="_blank" rel="external">数字和日期 MDN</a></h4></blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag">#JS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/09/JS-Function/" rel="next" title="JS学习笔记 函数">
+                <i class="fa fa-chevron-left"></i> JS学习笔记 函数
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/09/JS思维导图/" rel="prev" title="JS思维导图">
+                JS思维导图 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/09/JS-Math-Date/"
+           data-title="JS学习笔记 数字和日期" data-url="http://yoursite.com/2016/09/09/JS-Math-Date/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/v-killer.jpg"
+               alt="Fisland" />
+          <p class="site-author-name" itemprop="name">Fisland</p>
+          <p class="site-description motion-element" itemprop="description">study & share</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-数字和日期"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 数字和日期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数字"><span class="nav-number">1.1.</span> <span class="nav-text">数字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数字对象"><span class="nav-number">1.2.</span> <span class="nav-text">数字对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Math-object"><span class="nav-number">1.3.</span> <span class="nav-text">Math object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日期对象"><span class="nav-number">1.4.</span> <span class="nav-text">日期对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#parameters"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">parameters:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Date对象的方法"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">Date对象的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数字和日期-MDN"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">数字和日期 MDN</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Fisland</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"iissnan-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

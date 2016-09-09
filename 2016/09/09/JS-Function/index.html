@@ -104,7 +104,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
 return 定义了返回值参数 原始参数作为值传递，不影响全局或调用参数；对象传递则会。
 函数表达式1234var square  = function(number)&amp;#123;     return number*number;&amp;#125;;var x = square(4);
 还可以提供函数名，">
-<meta property="og:updated_time" content="2016-09-09T08:17:00.000Z">
+<meta property="og:updated_time" content="2016-09-09T09:00:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS学习笔记 函数">
 <meta name="twitter:description" content="JavaScript 函数定义函数
@@ -213,7 +213,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <li class="menu-item menu-item-essay">
           <a href="/categories/随笔" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />
             
             随笔
           </a>
@@ -223,7 +223,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <li class="menu-item menu-item-write">
           <a href="/categories/写作" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-pencil"></i> <br />
             
             写作
           </a>
@@ -233,7 +233,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <li class="menu-item menu-item-read">
           <a href="/categories/阅读" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
             
             阅读
           </a>
@@ -243,7 +243,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <li class="menu-item menu-item-html">
           <a href="/categories/前端" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-html5"></i> <br />
             
             前端
           </a>
@@ -253,7 +253,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <li class="menu-item menu-item-study">
           <a href="/categories/学习" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-fa-graduation-cap"></i> <br />
             
             学习
           </a>
@@ -263,7 +263,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <li class="menu-item menu-item-code">
           <a href="/categories/编程" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />
             
             编程
           </a>
@@ -436,8 +436,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
 <h3 id="更简洁函数"><a href="#更简洁函数" class="headerlink" title="更简洁函数"></a>更简洁函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [</span><br><span class="line">  <span class="string">"Hydrogen"</span>,</span><br><span class="line">  <span class="string">"Helium"</span>,</span><br><span class="line">  <span class="string">"Lithium"</span>,</span><br><span class="line">  <span class="string">"Beryl­lium"</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a2 = a.map(<span class="function"><span class="keyword">function</span>(<span class="params">s</span>)</span>&#123; <span class="keyword">return</span> s.length &#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a3 = a.map( s =&gt; s.length );</span><br></pre></td></tr></table></figure>
 <h3 id="this语法"><a href="#this语法" class="headerlink" title="this语法"></a>this语法</h3><p>箭头功能能捕捉上下文中的this值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.age = <span class="number">0</span>;</span><br><span class="line">	setInterval(()=&gt;&#123;</span><br><span class="line">		<span class="keyword">this</span>.age++;<span class="comment">// |this|properly refers to the person object</span></span><br><span class="line">	&#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="预定义函数"><a href="#预定义函数" class="headerlink" title="预定义函数"></a>预定义函数</h2><p>####</p>
-<ol>
+<h2 id="预定义函数"><a href="#预定义函数" class="headerlink" title="预定义函数"></a>预定义函数</h2><ol>
 <li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval" target="_blank" rel="external">eval()</a>  </p>
 <p> eval()方法会对一串字符串形式的JavaScript代码字符求值。</p>
 </li>
@@ -485,13 +484,13 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/09/JS-Math-Date/" rel="prev" title="JS学习笔记 数字和日期">
+                JS学习笔记 数字和日期 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -563,7 +562,7 @@ return 定义了返回值参数 原始参数作为值传递，不影响全局或
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
