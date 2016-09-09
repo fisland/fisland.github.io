@@ -251,9 +251,32 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
   
 </nav>
 
@@ -358,9 +381,15 @@
       
         
           
-            <h1 id="JS-思维导图"><a href="#JS-思维导图" class="headerlink" title="JS 思维导图"></a>JS 思维导图</h1><img src="/2016/09/09/JS思维导图/JavaScript_think.png" alt="JS思维导图" title="JS思维导图">
+          JS 思维导图
 
           
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/09/JS思维导图/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -478,199 +507,22 @@
       
         
           
-            <h1 id="JavaScript-数字和日期"><a href="#JavaScript-数字和日期" class="headerlink" title="JavaScript 数字和日期"></a>JavaScript 数字和日期</h1><h2 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h2><p>数字都是双精度浮点类型。3个符号值：<br>+Infinity、-Infinity、NaN<br><strong>没有特定的数据类型为整型</strong></p>
-<ul>
-<li>十进制<br>可以0开头，大于8，十进制，小于则是八进制。</li>
-<li>二进制<br>0开头 0b，0B</li>
-<li>八进制<br>0开头 后面0~7</li>
-<li>十六进制<br>0x，0X</li>
-<li>指数<br>E,e</li>
-</ul>
-<h2 id="数字对象"><a href="#数字对象" class="headerlink" title="数字对象"></a>数字对象</h2><p>Number</p>
-<p><strong>属性</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">MAX_VALUE</td>
-<td style="text-align:center">可表示的最大值</td>
-</tr>
-<tr>
-<td style="text-align:center">MIN_VALUE</td>
-<td style="text-align:center">可表示的最小值</td>
-</tr>
-<tr>
-<td style="text-align:center">NaN</td>
-<td style="text-align:center">特指”非数字“</td>
-</tr>
-<tr>
-<td style="text-align:center">NEGATIVE_INFINITY</td>
-<td style="text-align:center">特指“负无穷”;在溢出时返回</td>
-</tr>
-<tr>
-<td style="text-align:center">POSITIVE_INFINITY</td>
-<td style="text-align:center">特指“正无穷”;在溢出时返回</td>
-</tr>
-<tr>
-<td style="text-align:center">EPSILON</td>
-<td style="text-align:center">Difference between one and the smallest value greater than one that can be represented as a Number.</td>
-</tr>
-<tr>
-<td style="text-align:center">MIN_SAFE_INTEGER</td>
-<td style="text-align:center">JavaScript最小安全整数.</td>
-</tr>
-<tr>
-<td style="text-align:center">.MAX_SAFE_INTEGER</td>
-<td style="text-align:center">JavaScript最大安全整数.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>方法</strong>  </p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Method</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Number.parseFloat()</td>
-<td style="text-align:center">把字符串参数解析成浮点数</td>
-</tr>
-<tr>
-<td style="text-align:center">Number.parseInt()</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">Number.isFinite()</td>
-<td style="text-align:center">判断传递的值是否为有限数字。</td>
-</tr>
-<tr>
-<td style="text-align:center">Number.isInteger()</td>
-<td style="text-align:center">判断传递的值是否为整数。</td>
-</tr>
-<tr>
-<td style="text-align:center">Number.isNaN()</td>
-<td style="text-align:center">判断传递的值是否为 NaN.</td>
-</tr>
-<tr>
-<td style="text-align:center">Number.isSafeInteger()</td>
-<td style="text-align:center">判断传递的值是否为安全整数。</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Methods of Number.prototype</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Method</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">toExponential()</td>
-<td style="text-align:center">返回一个数字的指数形式的字符串，形如：1.23e+2</td>
-</tr>
-<tr>
-<td style="text-align:center">toFixed()</td>
-<td style="text-align:center">返回指定小数位数的表示形式，var a=123,b=a.toFixed(2)//b=”123.00”</td>
-</tr>
-<tr>
-<td style="text-align:center">toPrecision()</td>
-<td style="text-align:center">返回一个指定精度的数字。如下例子中，a=123中，3会由于精度限制被迫消失.var a=123,b=a.toPrecision(2)//b=”1.2e+2”</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Math-object"><a href="#Math-object" class="headerlink" title="Math object"></a>Math object</h2><p>对于内置的<em>Math</em>数学常项和函数也有一些函数和方法</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">Method</th>
-<th style="text-align:center">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">abs()</td>
-<td style="text-align:center">绝对值</td>
-</tr>
-<tr>
-<td style="text-align:center">sin(), cos(), tan()</td>
-<td style="text-align:center">标准三角函数;参数为弧度</td>
-</tr>
-<tr>
-<td style="text-align:center">asin(), acos(), atan(), atan2()</td>
-<td style="text-align:center">反三角函数; 返回值为弧度</td>
-</tr>
-<tr>
-<td style="text-align:center">sinh(), cosh(), tanh()</td>
-<td style="text-align:center">双曲三角函数; 返回值为弧度.</td>
-</tr>
-<tr>
-<td style="text-align:center">asinh(), acosh(), atanh()</td>
-<td style="text-align:center">反双曲三角函数;返回值为弧度.</td>
-</tr>
-<tr>
-<td style="text-align:center">pow(), exp(), expm1(), log10(), log1p(), log2()</td>
-<td style="text-align:center">指数与对数函数</td>
-</tr>
-<tr>
-<td style="text-align:center">floor(), ceil()</td>
-<td style="text-align:center">返回最大/最小整数小于/大于或等于参数</td>
-</tr>
-<tr>
-<td style="text-align:center">min(), max()</td>
-<td style="text-align:center">Returns lesser or greater (respectively) of comma separated list of numbers arguments</td>
-</tr>
-<tr>
-<td style="text-align:center">random()</td>
-<td style="text-align:center">返回0和1之间的随机数。</td>
-</tr>
-<tr>
-<td style="text-align:center">round(), fround(), trunc(),</td>
-<td style="text-align:center">四舍五入和截断函数</td>
-</tr>
-<tr>
-<td style="text-align:center">sqrt(), cbrt(), hypot()</td>
-<td style="text-align:center">平方根，立方根，平方参数的和的平方根 Square root of the sum of square arguments.</td>
-</tr>
-<tr>
-<td style="text-align:center">sign()</td>
-<td style="text-align:center">数字的符号, 说明数字是否为正、负、零。</td>
-</tr>
-<tr>
-<td style="text-align:center">clz32(),imul()</td>
-<td style="text-align:center">在32位2进制表示中，开头的0的数量.The result of the C-like 32-bit multiplication of the two arguments</td>
-</tr>
-</tbody>
-</table>
-<p>只能使用内建立的math对象</p>
-<h2 id="日期对象"><a href="#日期对象" class="headerlink" title="日期对象"></a>日期对象</h2><p>Date对象有大量的设置、获取和操作日期的方法。 它并不含有任何属性。<br>创建一个日期对象：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dateObject = <span class="keyword">new</span> <span class="built_in">Date</span>([parameters]);</span><br></pre></td></tr></table></figure>
-<h4 id="parameters"><a href="#parameters" class="headerlink" title="parameters:"></a>parameters:</h4><ul>
-<li>无参数:创建今天的日期和时间</li>
-<li>一个符合以下格式的字符串”MM dd,yy hh:mm:ss”。如果省略时分秒，那么值为0</li>
-<li>一个年，月，日的整数值得集合，var Xmas = new Date(1995,11,25).</li>
-<li>一个年，月，日，时，分，秒的集合，var Xmas = new Date(1995,11,25,9,30,0);</li>
-</ul>
-<h4 id="Date对象的方法"><a href="#Date对象的方法" class="headerlink" title="Date对象的方法"></a>Date对象的方法</h4><ul>
-<li>“Set”,用于设置Date</li>
-<li>“Get”,获取Date</li>
-<li>“To”,用于返回Date对象的字符串格式的值</li>
-<li>parse和UTC方法，用于解析Date字符串</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">var</span> endYear = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1995</span>,<span class="number">11</span>,<span class="number">30</span>,<span class="number">23</span>,<span class="number">59</span>,<span class="number">59</span>,<span class="number">999</span>);</span><br><span class="line">endYear.setFullYear(today.getFullYear);</span><br><span class="line"><span class="keyword">var</span> msPerDay = <span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>;</span><br><span class="line"><span class="keyword">var</span> daysLeft = (endYear.getTime() - today.getTime())/msPerDay;</span><br><span class="line">daysLeft = <span class="built_in">Math</span>.round(daysLeft);</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h4 id="数字和日期-MDN"><a href="#数字和日期-MDN" class="headerlink" title="数字和日期 MDN"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates" target="_blank" rel="external">数字和日期 MDN</a></h4></blockquote>
+          JavaScript 数字和日期数字数字都是双精度浮点类型。3个符号值：+Infinity、-Infinity、NaN没有特定的数据类型为整型
 
-          
+十进制可以0开头，大于8，十进制，小于则是八进制。
+二进制0开头 0b，0B
+八进制0开头 后面0~7
+十六进制0x，0X
+指数E,e
+
+数字对象Numb
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/09/JS-Math-Date/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -788,78 +640,20 @@
       
         
           
-            <h1 id="JavaScript-函数"><a href="#JavaScript-函数" class="headerlink" title="JavaScript 函数"></a>JavaScript 函数</h1><h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><ol>
-<li>函数的功能</li>
-<li>函数的参数列表（arguments）</li>
-<li>函数功能</li>
-</ol>
-<p><strong>return</strong> 定义了返回值<br><strong>参数</strong> 原始参数作为值传递，不影响全局或调用参数；对象传递则会。</p>
-<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> square  = <span class="function"><span class="keyword">function</span>(<span class="params">number</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">return</span> number*number;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> x = square(<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
-<p>还可以提供函数名，用在函数内部代指其本省。或者追踪鉴别该函数。<br>函数作为一个引数传递给其他函数时十分方便。<br>也可以通过条件来定义函数。<br>当一个对象的属性是函数时，称之为方法</p>
-<h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(square(<span class="number">5</span>));</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">n</span>) </span>&#123; <span class="keyword">return</span> n*n &#125;</span><br></pre></td></tr></table></figure>
-<p>还可以将整个对象传递给函数</p>
-<p>函数可以被递归，就是说函数可以调用其本身。如下例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">n</span>)</span>&#123; </span><br><span class="line">  <span class="keyword">if</span> ((n == <span class="number">0</span>) || (n == <span class="number">1</span>))&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> (n * factorial(n - <span class="number">1</span>));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e = factorial(<span class="number">5</span>); <span class="comment">// 120赋值给e</span></span><br></pre></td></tr></table></figure>
-<h2 id="函数的作用域-scope"><a href="#函数的作用域-scope" class="headerlink" title="函数的作用域 scope"></a>函数的作用域 scope</h2><p>全局变量 函数内变量</p>
-<h2 id="作用域和函数堆栈"><a href="#作用域和函数堆栈" class="headerlink" title="作用域和函数堆栈"></a>作用域和函数堆栈</h2><h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>一个函数可以指向并调用本身。下列三种方法.</p>
-<ol>
-<li>通过使用函数名</li>
-<li>使用arguments.callee</li>
-<li>使用作用域下的一个变量名来指向函数</li>
-</ol>
-<h3 id="嵌套函数与闭包"><a href="#嵌套函数与闭包" class="headerlink" title="嵌套函数与闭包"></a>嵌套函数与闭包</h3><ul>
-<li>内部函数只可以在外部函数中访问</li>
-<li>内部函数形成了一个闭包：他可以访问外部函数的参数和变量，但是外部函数却不能使用它的参数和变量 </li>
-</ul>
-<p>因为内部函数形成了闭包，你可以调用外部函数并且指定外部和内部函数的参数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outside</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> inside;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Think of it like: give me a function that adds 3 to whatever you give it</span></span><br><span class="line">fn_inside = outside(<span class="number">3</span>); </span><br><span class="line">result = fn_inside(<span class="number">5</span>); <span class="comment">// returns 8</span></span><br><span class="line"></span><br><span class="line">result1 = outside(<span class="number">3</span>)(<span class="number">5</span>); <span class="comment">// returns 8</span></span><br></pre></td></tr></table></figure>
-<h3 id="保存变量"><a href="#保存变量" class="headerlink" title="保存变量"></a>保存变量</h3><blockquote>
-<p>注意结合闭包和block之间的区别和练习，思考。</p>
-</blockquote>
-<p>上例子中x怎么被保留的。<br>一个闭包必须保存它可见作用域中所有的参数和变量。<br>每一次调用都是重新创建。</p>
-<h3 id="多层嵌套函数"><a href="#多层嵌套函数" class="headerlink" title="多层嵌套函数"></a>多层嵌套函数</h3><p>a包含b，b包含c，b和c都形成闭包。<br>闭包可以包含多个作用域；他们递归式的包含了所有包含它的函数作用域。这个称之为域链(scope chaining)。</p>
-<h3 id="命名冲突"><a href="#命名冲突" class="headerlink" title="命名冲突"></a>命名冲突</h3><p>当同一个闭包作用域下两个参数或者变量同名时，就会产生命名冲突。更近的作用域有更高的优先权，所以最近的优先级最高，最远的优先级最低。这就是作用域链。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">outside</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inside</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> inside;</span><br><span class="line">&#125;</span><br><span class="line">result = outside()(<span class="number">20</span>); <span class="comment">// returns 20 instead of 10</span></span><br></pre></td></tr></table></figure>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。 </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> createPet = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> sex;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    setName: <span class="function"><span class="keyword">function</span>(<span class="params">newName</span>) </span>&#123;</span><br><span class="line">      name = newName;</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    getName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> name;</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    getSex: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> sex;</span><br><span class="line">    &#125;,</span><br><span class="line">    </span><br><span class="line">    setSex: <span class="function"><span class="keyword">function</span>(<span class="params">newSex</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">typeof</span> newSex == <span class="string">"string"</span> </span><br><span class="line">        &amp;&amp; (newSex.toLowerCase() == <span class="string">"male"</span> || newSex.toLowerCase() == <span class="string">"female"</span>)) &#123;</span><br><span class="line">        sex = newSex;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> pet = createPet(<span class="string">"Vivie"</span>);</span><br><span class="line">pet.getName();                  <span class="comment">// Vivie</span></span><br><span class="line"></span><br><span class="line">pet.setName(<span class="string">"Oliver"</span>);</span><br><span class="line">pet.setSex(<span class="string">"male"</span>);</span><br><span class="line">pet.getSex();                   <span class="comment">// male</span></span><br><span class="line">pet.getName();                  <span class="comment">// Oliver</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意命名陷阱，内外函数变量名一样，那外部函数域将再也无法指向该变量。</p>
-</blockquote>
-<h3 id="使用arguments对象"><a href="#使用arguments对象" class="headerlink" title="使用arguments对象"></a>使用arguments对象</h3><p>函数的实际参数会被保存在类似数组的arguments对象中。</p>
-<blockquote>
-<p>arguments  </p>
-</blockquote>
-<p>例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myConcat</span>(<span class="params">separator</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> result = <span class="string">""</span>,i;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">1</span>; i&lt;<span class="built_in">arguments</span>.length; i++)&#123;</span><br><span class="line">		result += argument[i] + separator;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//return "red, orange, blue,"</span></span><br><span class="line">myConcat(<span class="string">","</span>,<span class="string">"red"</span>,<span class="string">"orange"</span>,<span class="string">"blue"</span>);</span><br></pre></td></tr></table></figure>
-<p><em>arguments变量只是类数组对象，并不是真的数组</em></p>
-<h2 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h2><h3 id="默认参数-ES6"><a href="#默认参数-ES6" class="headerlink" title="默认参数(ES6)"></a>默认参数(ES6)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">a, b = 1</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a * b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h3><p>该语法允许将不确定数量的参数表示为数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">multiplier, ...theArgs</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> theArgs.map(x =&gt; multiplier * x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = multiply(<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [2, 4, 6]</span></span><br></pre></td></tr></table></figure>
-<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>也称为胖箭头函数（fat arrow）<br>总是匿名函数（ES6）<br>有两个因素会影响介绍箭头函数：更简洁的函数和this。</p>
-<h3 id="更简洁函数"><a href="#更简洁函数" class="headerlink" title="更简洁函数"></a>更简洁函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [</span><br><span class="line">  <span class="string">"Hydrogen"</span>,</span><br><span class="line">  <span class="string">"Helium"</span>,</span><br><span class="line">  <span class="string">"Lithium"</span>,</span><br><span class="line">  <span class="string">"Beryl­lium"</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a2 = a.map(<span class="function"><span class="keyword">function</span>(<span class="params">s</span>)</span>&#123; <span class="keyword">return</span> s.length &#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a3 = a.map( s =&gt; s.length );</span><br></pre></td></tr></table></figure>
-<h3 id="this语法"><a href="#this语法" class="headerlink" title="this语法"></a>this语法</h3><p>箭头功能能捕捉上下文中的this值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.age = <span class="number">0</span>;</span><br><span class="line">	setInterval(()=&gt;&#123;</span><br><span class="line">		<span class="keyword">this</span>.age++;<span class="comment">// |this|properly refers to the person object</span></span><br><span class="line">	&#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="预定义函数"><a href="#预定义函数" class="headerlink" title="预定义函数"></a>预定义函数</h2><ol>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval" target="_blank" rel="external">eval()</a>  </p>
-<p> eval()方法会对一串字符串形式的JavaScript代码字符求值。</p>
-</li>
-<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/uneval" target="_blank" rel="external">uneval()</a></p>
-</li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isFinite" target="_blank" rel="external">isFinite()</a></li>
-<li>isNaN()</li>
-<li>parseFloat()</li>
-<li>parseInt()</li>
-<li>decodeURL()</li>
-<li>decodeURIComponent()</li>
-<li>encodeURI()</li>
-<li>encodeURIComponent()</li>
-</ol>
-<blockquote>
-<h3 id="MDN-引用"><a href="#MDN-引用" class="headerlink" title="MDN 引用"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Functions" target="_blank" rel="external">MDN 引用</a></h3></blockquote>
+          JavaScript 函数定义函数
+函数的功能
+函数的参数列表（arguments）
+函数功能
 
-          
+return 定义了返回值参数 原始参数作为值传递，不影响全局或调用参数；对象传递则会。
+函数表达式1234var square  = function(number)&#123;     return
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/09/JS-Function/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1120,6 +914,135 @@
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
 
