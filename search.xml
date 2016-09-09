@@ -21,6 +21,7 @@
 <li>十六进制<br>0x，0X</li>
 <li>指数<br>E,e</li>
 </ul>
+<a id="more"></a>
 <h2 id="数字对象"><a href="#数字对象" class="headerlink" title="数字对象"></a>数字对象</h2><p>Number</p>
 <p><strong>属性</strong></p>
 <table>
@@ -215,7 +216,7 @@
 <li>函数的参数列表（arguments）</li>
 <li>函数功能</li>
 </ol>
-<p><strong>return</strong> 定义了返回值<br><strong>参数</strong> 原始参数作为值传递，不影响全局或调用参数；对象传递则会。</p>
+<p><strong>return</strong> 定义了返回值<br><strong>参数</strong> 原始参数作为值传递，不影响全局或调用参数；对象传递则会。<br><a id="more"></a></p>
 <h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> square  = <span class="function"><span class="keyword">function</span>(<span class="params">number</span>)</span>&#123;</span><br><span class="line">     <span class="keyword">return</span> number*number;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> x = square(<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
 <p>还可以提供函数名，用在函数内部代指其本省。或者追踪鉴别该函数。<br>函数作为一个引数传递给其他函数时十分方便。<br>也可以通过条件来定义函数。<br>当一个对象的属性是函数时，称之为方法</p>
 <h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(square(<span class="number">5</span>));</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params">n</span>) </span>&#123; <span class="keyword">return</span> n*n &#125;</span><br></pre></td></tr></table></figure>
