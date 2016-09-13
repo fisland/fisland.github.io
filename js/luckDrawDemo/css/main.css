@@ -1,0 +1,136 @@
+body{
+    font-family:"微软雅黑";
+    max-width: 640px;
+    height: 1000px;;
+    margin: 0 auto;
+    background-image: url("../imgs/choujiang_bg2.png");
+    background-repeat:no-repeat ;
+    position: relative;
+}
+.header .userInfo,.header .title{
+    text-align: center;
+    margin-top: 40px;
+}
+.tel{
+    font-size: 22px;
+    color: #682c09;
+    text-decoration: underline;
+}
+.header .title{
+    font-size: 32px;
+    color: #ffffff;
+}
+.header .title i{
+    font-size: 46px;
+    color: #ffffff;
+}
+.dial_area{
+    width: 600px;
+    height: 650px;
+    margin: 40px auto;
+    background-image: url("../imgs/choujiang-bg.png");
+    position: relative;
+}
+.dial_area .go_btn{
+    display: inline-block;
+    position: absolute;
+    left: 228px;
+    top:187px;
+    vertical-align: middle;
+    color: #6b2c09;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    width: 140px;
+    height: 270px;
+    line-height: 270px;
+    border-radius: 20px;
+    background: #ffbc64;
+    border: 2px solid #5a3c66;
+    box-shadow: 0 -10px 0 #f6ad4c inset;
+    text-align: center;
+}
+.dial_area .dial_item{
+    position: absolute;
+    display: inline-block;
+    width: 140px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 20px;
+    background: #ffd7da;
+    border: 2px solid #5a3c66;
+    box-shadow: 0 -10px 0 #fbc6ca inset;
+    text-align: center;
+}
+.dial_area .active{
+    background: #ffbc64;
+    box-shadow: none;
+
+}
+.dial_area .dial_item .dial_img{
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+.dial_area .dial_item .dial_img img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dial_area .dial_item .dial_name{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 19px;
+    color: #d59b4e;
+    text-align: center;
+}
+.dial_area ul li:nth-child(1).dial_item{
+    left: 42px;
+    top: 34px;
+}
+.dial_area ul li:nth-child(2).dial_item{
+    left: 232px;
+    top: 34px;
+}
+.dial_area ul li:nth-child(3).dial_item{
+    left: 416px;
+    top: 34px;
+}
+.dial_area ul li:nth-child(4).dial_item{
+    left: 42px;
+    top: 187px;
+}
+.dial_area ul li:nth-child(5).dial_item{
+    left: 416px;
+    top: 187px;
+}
+.dial_area ul li:nth-child(6).dial_item{
+    left: 42px;
+    top: 340px;
+}
+.dial_area ul li:nth-child(7).dial_item{
+    left: 416px;
+    top: 340px;
+}
+.dial_area ul li:nth-child(8).dial_item{
+    left: 42px;
+    top: 494px;
+}
+.dial_area ul li:nth-child(9).dial_item{
+    left: 232px;
+    top: 494px;
+}
+.dial_area ul li:nth-child(10).dial_item{
+    left: 416px;
+    top: 494px;
+}
+
+footer{
+    position: absolute;
+    width: 640px;
+    font-size: 22px;
+    text-align: center;
+    color: #682c09;
+    text-decoration: underline;
+    bottom: 40px;
+}
