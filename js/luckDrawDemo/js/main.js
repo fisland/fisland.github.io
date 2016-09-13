@@ -24,7 +24,7 @@ function addEventHandle(ele,event,handle) {
 function init() {
     var gobutton = document.getElementById("go_btn");
     addEventHandle(gobutton,"click",function () {
-        setInterval("randomChange()",1000);
+        setInterval("randomChange()",500);
     });
     
 }
