@@ -33,6 +33,7 @@ body{
 }
 .dial_area .go_btn{
     display: inline-block;
+    cursor: pointer;
     position: absolute;
     left: 228px;
     top:187px;
