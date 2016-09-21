@@ -3,9 +3,11 @@
  */
 
 var lastNumber = 0;
+var count = 0;
 var dialList = document.getElementsByClassName("dial_item");
 var oColor = "#ffd7da";
 var nColor = "#ffbc64";
+var time;
 /**
  *点击事件
  */
@@ -24,7 +26,7 @@ function addEventHandle(ele,event,handle) {
 function init() {
     var gobutton = document.getElementById("go_btn");
     addEventHandle(gobutton,"click",function () {
-        setInterval("randomChange()",500);
+       time = setInterval("randomChange()",1000);
     });
     
 }
@@ -37,6 +39,12 @@ function randomChange() {
     var dialItem = dialList[randomNum];
     // dialItem.style.background = nColor;
     dialItem.className += " active";
+    count++;
+
+    if (count == 10){
+        count = 0;
+        clearInterval(time);
+    }
 
     lastNumber = randomNum;
 }
