@@ -1,0 +1,45 @@
+<!--
+1. 功能: 实现发射弹幕、清除弹幕、显示弹幕功能。
+
+2. 扩展: 你可以用野狗实时后端云来存储弹幕数据。
+
+3. 实现路径: 结构->样式->功能->存储
+
+4. 第一步: 先设计一个简单的弹幕页面，上面有弹幕墙、输入框、按钮，并添加样式。
+
+5. 第二步: 然后给弹幕页面添加功能，能实现发射弹幕、清除弹幕、显示弹幕等功能。
+
+6. 第三步: 最后通过你的github账户登录野狗实时后端云，创建一个你自己的应用，就可以把弹幕数据存储到数据库中，进而可以在多个终端进行实时互动。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>弹幕墙</title>
+    <link href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="danmu.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">弹幕墙</h1>
+        <div class="danmu-wraper">
+            <div class="dm-screen">
+                <div class="dm-mask"></div>
+                <div class="dm-show"></div>
+            </div>
+            <div class="dm-send">
+                <input type="text" placeholder="说点啥" id="dm-text">
+                <input type="button" class="btn btn-primary" value="发送" id="btn-sub">
+                <input type="button" class="btn btn-danger" value="清屏" id="btn-del">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.wilddog.com/sdk/js/2.3.8/wilddog.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="danmu.js"></script>
+</body>
+</html>
