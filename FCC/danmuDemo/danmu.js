@@ -39,7 +39,7 @@ ref.child('messages').on("child_added",function (snapshot) {
     messageDiv.text(text);
     $(".dm-show").append(messageDiv);
     moveMessageDiv(messageDiv);
-    
+
 });
 
 ref.on("child_removed",function (snapshot) {
@@ -52,9 +52,8 @@ var topMax = topMin + $('.dm-mask').height();
 var _top = topMin;
 var leftMax = $('.dm-mask').offset().left;
 
-
 var  moveMessageDiv = function (obj) {
-    var _left = $('.dm-mask').width() - obj.width();
+    var _left = $('.dm-mask').width() - obj.width()+leftMax;
     _top = _top + 50;
     if (_top > topMax - 50){
         _top = topMin;
@@ -64,10 +63,10 @@ var  moveMessageDiv = function (obj) {
         top:_top,
         color:getRandomColor()
     });
-    var  time = 10000 + 10000*Math.random();
+    var  time = 5000 + 10000*Math.random();
     obj.animate({
         left:leftMax,
-    }, time, function () {
+    }, time, "linear", function () {
         obj.remove();
     });
 };
@@ -92,4 +91,5 @@ var getAndRun = function(){
 
 jQuery.fx.interval = 50;
 getAndRun();
+changeColor();
 

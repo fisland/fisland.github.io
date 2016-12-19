@@ -1,0 +1,47 @@
+body{
+    background: #000;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+.quote-wrap{
+    background: #ffffff;
+    width: 50%;
+    /*height: 500px;*/
+    margin: 80px auto 0 auto;
+    color: #000;
+    border-radius: 10px;
+
+}
+.quote-in-wrap{
+    margin: 0 auto;
+    padding: 15px;
+}
+.quote-in-wrap .content{
+    /*margin-top: 20px;*/
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    /*line-height: 22px;*/
+}
+.quote-in-wrap .author{
+    width: 100%;
+    text-align: right;
+    /*margin-bottom: 20px;*/
+}
+.by{
+    color: #fff;
+    margin-top:20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.new{
+    float: right;
+}
+.button{
+    background: #000000;
+    color: white;
+    border: none;
+}
